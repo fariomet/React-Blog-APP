@@ -96,7 +96,7 @@ my-blog/
 
 ### Data Fetching
 - Uses `axios` for API calls to JSONPlaceholder
-- Implements custom React hooks (`usePosts`, `usePost`)
+- Implements custom React hooks (`useState`, `useEffect`)
 - Handles loading states and error scenarios gracefully
 
 ### Routing
