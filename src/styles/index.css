@@ -66,9 +66,9 @@ body{
   margin: 16px;
   border: 1px solid #e8ecef;
   transition: all 0.3s ease;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease; */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .post-card:hover {
   transform: translateY(-3px);
@@ -229,11 +229,6 @@ body{
   }
 }
 
-@media (max-width: 768px) {
-  .post-card {
-    width: calc(100% - 12px);
-    margin: 12px;
-  }
 }
 @media (max-width: 400px) {
   .app .container{ 
