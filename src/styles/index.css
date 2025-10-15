@@ -50,20 +50,25 @@ body{
 .posts-grid{ 
   display: grid; 
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 20px; 
+  gap: 28px; 
   width: 100%;
 }
 
 /* POST CARD - Consistent with search bar width */
 .post-card{ 
   background: #fff; 
-  padding: 20px;
+  padding: 24px;
   border-radius: 8px; 
-  box-shadow: 0 1px 6px rgba(0,0,0,0.04); 
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08); 
   width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12); /* Enhanced shadow on hover */
 }
 .post-card h3{ 
   margin: 0 0 12px; 
