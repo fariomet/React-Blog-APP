@@ -30,7 +30,7 @@ Make sure you have the following installed on your system:
 ### Step 1: Clone or Download the Project
 If you have the project files, navigate to the project directory:
 ```bash
-cd react-blog-app
+cd my-blog
 ```
 
 ### Step 2: Install Dependencies
