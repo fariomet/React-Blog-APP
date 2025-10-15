@@ -53,7 +53,7 @@ npm run dev
 ### Step 4: View the Application
 Open your browser and visit:
 ```
-https://react-blog-app-eight-drab.vercel.app
+https://react-blog-app-eight-drab.vercel.app/
 ```
 
 The app will automatically reload if you make any changes to the code.
