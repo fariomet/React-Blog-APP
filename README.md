@@ -4,13 +4,13 @@ A modern, responsive blog application built with React that fetches and displays
 
 ## ✨ Features
 
-- ** Responsive Design** - Works perfectly on desktop, tablet, and mobile
-- ** Search Functionality** - Filter posts by title in real-time
-- ** Post Details** - Full post view with author information
-- ** Fast Navigation** - Smooth page transitions with React Router
-- ** Clean UI** - Modern, professional design with custom CSS
-- ** Loading States** - Elegant loading spinners and error handling
-- ** Author Details** - Displays post author information from API
+- Responsive Design - Works perfectly on desktop, tablet, and mobile
+- Search Functionality - Filter posts by title in real-time
+- Post Details - Full post view with author information
+- Fast Navigation - Smooth page transitions with React Router
+- Clean UI - Modern, professional design with custom CSS
+- Loading States - Elegant loading spinners and error handling
+- Author Details - Displays post author information from API
 
 ## 🛠 Technologies Used
 
