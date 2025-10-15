@@ -224,9 +224,6 @@ body{
   .search-bar {
     margin-bottom: 20px;
   }
-}
-
-}
 @media (max-width: 400px) {
   .app .container{ 
     padding: 12px;
