@@ -98,7 +98,6 @@ body{
   border: none;
   cursor: pointer;
   font-size: 0.95rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* POST DETAILS PAGE - Same container alignment */
