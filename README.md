@@ -51,28 +51,5 @@ https://jsonplaceholder.typicode.com/posts
   "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum..."
 }
 
-💻 Technologies Used
-React.js            -   Frontendframework                
-Vite                -  Development server and build tool 
-JavaScript (ES6)    -   Logic and interactivity           
-HTML5 & CSS3        -  Structure and styling             
-JSON Placeholder API-  Data source for posts             
-React Router DOM    -  Routing between pages             
-
-⚙️ Installation and Setup
-1. Created project with vite
-
-npm create vite@latest my-blog -- --template react
-cd my-blog
-npm install
-
-
-2. Install React Router
-
-npm install react-router-dom
-
-3. Start dev server
-
-npm run dev
 
 
