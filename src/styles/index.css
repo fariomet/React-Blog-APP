@@ -7,22 +7,26 @@ body{
   font-family: system-ui, Arial, sans-serif; 
   margin: 0; 
   padding: 0; 
-  display: flex; 
-  justify-content: center; 
   background: #f6f8fb; 
   color: #111;
 }
+
+/* MAIN CONTAINER - Consistent for all pages */
 .app .container{ 
   max-width: var(--max-w); 
   width: 100%; 
+  margin: 0 auto;
   padding: 20px; 
 }
 
+/* NAVIGATION - Full width within container */
 .nav{ 
   background: #fff; 
   padding: 12px 20px; 
   box-shadow: 0 1px 4px rgba(0,0,0,0.06); 
   margin-bottom: 12px; 
+  width: 100%;
+  border-radius: 8px;
 }
 .logo{ 
   font-weight: 700; 
@@ -30,185 +34,198 @@ body{
   color: var(--accent); 
 }
 
-.search input{ 
-  width: 100%; 
-  padding: 10px; 
-  border-radius: 6px; 
-  border: 1px solid #ddd; 
-  margin-bottom: 16px; 
+/* SEARCH BAR - Same width as post cards */
+.search-bar {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin: 0 0 24px 0; /* Consistent bottom margin */
+  box-sizing: border-box;
 }
 
+/* POSTS GRID - Consistent spacing */
 .posts-grid{ 
   display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:16px; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 20px; 
+  width: 100%;
 }
 
+/* POST CARD - Consistent with search bar width */
 .post-card{ 
   background: #fff; 
-  padding: 14px; 
+  padding: 20px;
   border-radius: 8px; 
   box-shadow: 0 1px 6px rgba(0,0,0,0.04); 
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 .post-card h3{ 
-  margin: 0 0 8px; 
-  font-size: 1.05rem; 
+  margin: 0 0 12px; 
+  font-size: 1.1rem; 
+  line-height: 1.4;
 }
 .excerpt{ 
   color: #444; 
-  margin: 0 0 12px; 
+  margin: 0 0 16px; 
+  line-height: 1.5;
+  flex-grow: 1;
 }
 .card-actions{ 
   display: flex; 
-  justify-content:flex-end; 
+  justify-content: flex-end; 
+  margin-top: auto;
 }
 .btn{ 
   background: var(--accent); 
   color: #fff; 
-  padding: 8px 12px;
+  padding: 10px 16px;
   border-radius: 6px;
   text-decoration: none; 
   font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
 }
-.back{
-  background: #eee; 
-  color: #111; 
-  margin-top: 16px; 
-  display: inline-block;
-}
+
+/* POST DETAILS PAGE - Same container alignment */
 .post-details {
-  max-width: 800px;
-  margin: 3rem auto;
+  max-width: var(--max-w);
+  width: 100%;
+  margin: 2rem auto;
   background: #ffffff;
-  padding: 2rem 2.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
 }
 
 .post-details h1 {
   font-size: 1.8rem;
   color: #222;
-  margin-bottom: 1rem;
-  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
 }
 
 .post-details p {
   color: #444;
   line-height: 1.7;
-  font-size: 1rem;
+  font-size: 1.05rem;
   margin-bottom: 1.5rem;
 }
 
 .post-details .author {
   background: #f8f9fb;
-  border-left: 4px solid #007bff;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  border-left: 4px solid var(--accent);
+  padding: 1.2rem;
+  border-radius: 8px;
   font-size: 0.95rem;
+  margin-bottom: 1.5rem;
 }
 
 .post-details .author h4 {
-  color: #007bff;
-  margin-bottom: 0.3rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
 }
 
 .post-details .back-btn {
   display: inline-block;
   margin-bottom: 1.5rem;
   text-decoration: none;
-  background: #007bff;
+  background: var(--accent);
   color: #fff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 0.5rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: 6px;
   font-weight: 500;
   transition: background 0.3s ease;
 }
 
 .post-details .back-btn:hover {
-  background: #0056b3;
+  background: #1d4ed8;
 }
 
-@media (max-width: 600px) {
-  .post-details {
-    padding: 1.5rem;
-    margin: 2rem 1rem;
-  }
-
-  .post-details h1 {
-    font-size: 1.4rem;
-  }
-
-  .post-details p {
-    font-size: 0.95rem;
-  }
-}
-
-
+/* LOADING STATES */
 .loading, .error{ 
   text-align: center; 
-  padding: 24px;
-}
-@media (max-width:520px){
-  .app .container{ 
-    padding: 12px;
-  }
-  .posts-grid{ gap: 10px; }
+  padding: 2rem;
+  width: 100%;
 }
 
-/* ===== Loading Spinner ===== */
 .loading-spinner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  padding: 3rem;
   text-align: center;
   color: #555;
+  width: 100%;
 }
 
 .spinner {
   width: 50px;
   height: 50px;
   border: 5px solid #ddd;
-  border-top: 5px solid #007bff;
+  border-top: 5px solid var(--accent);
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-bottom: 1rem;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.search-bar {
-  /* width: 100%;
-  max-width: 400px;
-  margin: 1rem 0;
-  padding: 0.7rem 1rem;
-  font-size: 1rem;
-  border-radius: 10px;
-  /* border: 1px solid #ccc; */ 
-  display: block;
-  width: 100%;
-  max-width: 680px;
-  margin: 0 auto 20px auto;
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-}
-
-.loading,
-.error {
-  font-size: 1.1rem;
-  color: #444;
-  text-align: center;
-  margin-top: 2rem;
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .error {
   color: #d9534f;
+  background: #fdf2f2;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  margin: 1rem 0;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+  .app .container{ 
+    padding: 16px;
+  }
+  
+  .post-details {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .post-details h1 {
+    font-size: 1.4rem;
+  }
+
+  .posts-grid{ 
+    grid-template-columns: 1fr;
+    gap: 16px; 
+  }
+  
+  .post-card {
+    padding: 16px;
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .app .container{ 
+    padding: 12px;
+  }
+  
+  .posts-grid{ 
+    gap: 12px; 
+  }
 }
