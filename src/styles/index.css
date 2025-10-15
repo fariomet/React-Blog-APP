@@ -50,7 +50,7 @@ body{
 .posts-grid{ 
   display: grid; 
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 20px; 
+  gap: 24px; 
   width: 100%;
 }
 
@@ -231,6 +231,6 @@ body{
   }
   
   .posts-grid{ 
-    gap: 12px; 
+    gap: 16px; 
   }
 }
