@@ -99,6 +99,17 @@ body{
   cursor: pointer;
   font-size: 0.95rem;
 }
+.btn-slide {
+  background: linear-gradient(to right, var(--accent) 50%, #1d4ed8 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.4s ease-out;
+}
+
+.btn-slide:hover {
+  background-position: left bottom;
+  transform: translateY(-2px);
+}
 
 /* POST DETAILS PAGE - Same container alignment */
 .post-details {
